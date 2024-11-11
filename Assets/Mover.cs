@@ -25,6 +25,7 @@ public class Mover : MonoBehaviour
         //Ensure Rigidbody is set to use discrete collision detection
         //This is to avoid unecessary lag
         rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
+
     }
 
     //Getter for player index
@@ -61,6 +62,11 @@ public class Mover : MonoBehaviour
             //Smoothly rotate towards the target direction
             rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * 10f));
         }
+        else if (targetMoveDirection.magnitude == 0)//if the player isn't moving stop the rotation instantly
+        {
+            rb.angularVelocity = Vector3.zero;
+        }
+
 
         //Calculate new position based on input and current position
         Vector3 newPosition = rb.position + targetMoveDirection * Time.fixedDeltaTime;
