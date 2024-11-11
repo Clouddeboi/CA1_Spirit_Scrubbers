@@ -23,6 +23,7 @@ public class Mover : MonoBehaviour
         }
 
         //Ensure Rigidbody is set to use discrete collision detection
+        //This is to avoid unecessary lag
         rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
     }
 
@@ -48,6 +49,18 @@ public class Mover : MonoBehaviour
 
         //Convert input to 3D direction
         Vector3 targetMoveDirection = new Vector3(inputVector.x, 0, inputVector.y) * moveSpeed;
+
+        //Checks if there is any movement input from the player
+        //We do this to prevent the player from rotating unitentionally 
+        if (targetMoveDirection.magnitude > 0.1f)
+        {
+            //Calculate the target rotation based on the movement direction
+            //Quaternion.LookRotation() generates a rotation based on the direction the player is facing
+            Quaternion targetRotation = Quaternion.LookRotation(targetMoveDirection, Vector3.up);
+
+            //Smoothly rotate towards the target direction
+            rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * 10f));
+        }
 
         //Calculate new position based on input and current position
         Vector3 newPosition = rb.position + targetMoveDirection * Time.fixedDeltaTime;
