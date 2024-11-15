@@ -111,7 +111,7 @@ MonoBehaviour:
   interactableLayer:
     serializedVersion: 2
     m_Bits: 8
-  raycastRange: 10
+  detectionBoxSize: {x: 2, y: 2, z: 2}
 --- !u!114 &7250538916910825542
 MonoBehaviour:
   m_ObjectHideFlags: 0
