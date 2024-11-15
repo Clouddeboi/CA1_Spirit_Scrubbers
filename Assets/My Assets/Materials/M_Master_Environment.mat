@@ -29,7 +29,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Albedo_Map:
-        m_Texture: {fileID: 2800000, guid: f8d034f71214ca6449dbf50f72979ced, type: 3}
+        m_Texture: {fileID: 2800000, guid: b900361e13e6eaa44963cb851faf3ed3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emissive_Map:
@@ -74,7 +74,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Smoothness_Intensity: 1
-    - _Tiling: 1
+    - _Tiling: 0.25
     - _Use_AO: 1
     - _Use_Emissive: 0
     - _Use_Metallic_Map: 1

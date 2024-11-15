@@ -25,11 +25,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AO_Map:
-        m_Texture: {fileID: 2800000, guid: fab39a712b9b4914e981863c8c7fa233, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0bde6e27f85fd544d894b8997034c8ab, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Albedo:
         m_Texture: {fileID: 2800000, guid: 45a4bccacc66d684eacd889806138b24, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Albedo_Map:
+        m_Texture: {fileID: 2800000, guid: a88ee9ed9af4fc946a99eb6839565475, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emissive_Map:
@@ -40,9 +44,17 @@ Material:
         m_Texture: {fileID: 2800000, guid: fab39a712b9b4914e981863c8c7fa233, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal_Map:
+        m_Texture: {fileID: 2800000, guid: 76f51ee2128be8340950cc15ba9695dd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Smoothness_Map:
+        m_Texture: {fileID: 2800000, guid: 02058dd182c528744986488fe9d35a60, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AO_Intensity: 0
+    - _AO_Intensity: 1
     - _Blend: 1
     - _Darkening_Distance: 0.15
     - _Emission_Intensity: 1
@@ -51,15 +63,15 @@ Material:
     - _Flip_X: 0
     - _Flip_Y: 0
     - _Flip_Z: 0
-    - _Metallic_Intensity: 0
+    - _Metallic_Intensity: 0.125
     - _Metallic_intensity: 0
     - _Pulse_Speed: 1
     - _Smoothness_Intensity: 0.125
-    - _Tiling: 1.5
-    - _Use_AO: 0
+    - _Tiling: 0.75
+    - _Use_AO: 1
     - _Use_Emission: 0
     - _Use_Metallic_Map: 0
-    - _Use_Smoothness_Map: 0
+    - _Use_Smoothness_Map: 1
     - _X: 1
     - _Y: 0
     - _Z: 0
