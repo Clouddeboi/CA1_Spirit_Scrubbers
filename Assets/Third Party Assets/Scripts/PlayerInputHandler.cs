@@ -69,15 +69,42 @@ public class PlayerInputHandler : MonoBehaviour
 
                 if (objectPickup.isFacingObject)
                 {
-                    //If we are facing an object
-                    Debug.Log("Interact button pressed and interacted with an object!");
+                    //If player is not already carrying an object, pick it up
+                    if (!objectPickup.IsCarryingObject())
+                    {
+                        GameObject objectToPickup = objectPickup.GetCarriedObject();
+                        if (objectToPickup != null)
+                        {
+                            objectPickup.PickupObject(objectToPickup);
+                            Debug.Log("Picked up object: " + objectToPickup.name);
+                        }
+                    }
+                    //Otherwise drop the object if it's already being carried
+                    else
+                    {
+                        GameObject objectToDrop = objectPickup.GetCarriedObject();
+                        if (objectToDrop != null)
+                        {
+                            objectPickup.DropObject(objectToDrop);
+                            Debug.Log("Dropped object: " + objectToDrop.name);
+                        }
+                    }
                 }
                 else
                 {
-                    //If no object is detected
                     Debug.Log("No object to interact with.");
                 }
             }
+        }
+    }
+
+    private void Update()
+    {
+        //Update the position of the carried object every frame
+        if (objectPickup != null && objectPickup.IsCarryingObject())
+        {
+            //Keep the carried object in front of the player
+            objectPickup.UpdateCarriedObjectPosition();
         }
     }
 }

@@ -7,7 +7,7 @@ public class ObjectPickup : MonoBehaviour
     private LayerMask layerMask; 
 
     //Size of the detection box (as a 3D box shape in front of the player)
-    private Vector3 boxSize = new Vector3(2f, 2f, 2f);  // Default size (2, 2, 5)
+    private Vector3 boxSize = new Vector3(2f, 2f, 2f);  // Default size (2, 2, 2)
 
     //Offset of the detection box relative to the player (in front of the player)
     private Vector3 boxOffset = new Vector3(0f, 1f, 1f); 
@@ -16,6 +16,12 @@ public class ObjectPickup : MonoBehaviour
     //get; allows other scripts to retrieve the value
     //private set doesn't let the other scripts edit the value
     public bool isFacingObject { get; private set; }
+
+    //The object the player is carrying
+    private GameObject currentObject = null;
+
+    //Boolean to check if the player is carrying an object
+    private bool isCarryingObject = false;
 
     //Method to set the detection box size dynamically
     //This is to allow changing the box size from another script
@@ -58,6 +64,8 @@ public class ObjectPickup : MonoBehaviour
                 Debug.Log("Object detected: " + hitCollider.gameObject.name);
                 //We set our bool to true
                 isFacingObject = true;
+                //Store the first object we hit
+                currentObject = hitCollider.gameObject;
                 //Draw a debug line from the player to the detected object
                 Debug.DrawLine(transform.position, hitCollider.transform.position, Color.green); //Show a debug line
                 //Stop after finding the first interactable object
@@ -69,7 +77,70 @@ public class ObjectPickup : MonoBehaviour
         {
             //If no objects are detected
             Debug.Log("No objects detected in the box.");
+            currentObject = null; // Clear the current object if none detected
         }
+    }
+
+    //Method to pick up the object
+    public void PickupObject(GameObject objectToPickup)
+    {
+        if (objectToPickup != null)
+        {
+            //We are now carrying an object
+            isCarryingObject = true;
+            
+            //Store the object we picked up
+            currentObject = objectToPickup;
+        }
+    }
+
+    //Method to drop the object
+    public void DropObject(GameObject objectToDrop)
+    {
+        if (objectToDrop != null)
+        {
+            //We are no longer carrying an object
+            isCarryingObject = false;
+
+            //Clear the current object we were carrying
+            currentObject = null;
+        }
+    }
+
+    //Method to update the carried object's position
+    //Call this from another script to move the object with the player
+    public void UpdateCarriedObjectPosition()
+    {
+        if (currentObject != null && isCarryingObject)
+        {
+            //Position the object just in front of the player
+            currentObject.transform.position = transform.position + transform.forward * 1.75f;  //Adjust distance if needed
+            currentObject.transform.rotation = transform.rotation;  //Keep rotation aligned with player
+        }
+    }
+
+    //Public method to check if the player is carrying an object
+    public bool IsCarryingObject()
+    {
+        return isCarryingObject;
+    }
+
+    //Public method to get the currently carried object
+    public GameObject GetCarriedObject()
+    {
+        return currentObject;
+    }
+
+    //Getter method for box size (so other scripts can access it)
+    public Vector3 GetBoxSize()
+    {
+        return boxSize;
+    }
+
+    //Getter method for box offset (so other scripts can access it)
+    public Vector3 GetBoxOffset()
+    {
+        return boxOffset;
     }
 
     //Draw the detection box for debugging in the scene view
