@@ -18,9 +18,9 @@ public class CS_UI_Manager : MonoBehaviour
     private string[] cvNames = {
 
         "CV_Main_Menu",
-        "CV_Options_Menu",
-        "CV_Pause_Menu",
         "CV_Game_Play",
+        "CV_Options_Menu",
+        "CV_Pause_Menu",        
         "CV_Game_Over_Menu",
         "CV_Victory_Menu"
         };
@@ -66,10 +66,7 @@ public class CS_UI_Manager : MonoBehaviour
             }
         }
 
-        if (cvs.Contains<Canvas>(GameObject.Find("CV_Main_Menu").GetComponent<Canvas>())) {
-
-            cvs[0].enabled = true;
-        }
+        cvs[0].enabled = true;
     }
     /*
     private void Start () {
