@@ -94,7 +94,8 @@ public class ObjectPickup : MonoBehaviour
         }
     }
 
-    //Method to drop the object
+    //Method to drop the object 
+    //(updated)Method now throws the object in the direction the player is facing
     public void DropObject(GameObject objectToDrop)
     {
         if (objectToDrop != null)
@@ -102,10 +103,26 @@ public class ObjectPickup : MonoBehaviour
             //We are no longer carrying an object
             isCarryingObject = false;
 
+            //Apply force to the object's Rigidbody
+            //Get the objects rigidbody, if its not null execute throwing item
+            Rigidbody objectRigidbody = objectToDrop.GetComponent<Rigidbody>();
+            if (objectRigidbody != null)
+            {
+                //The direction the player is facing
+                Vector3 throwDirection = transform.forward;
+                //Add force to the object in the direction the player is facing
+                objectRigidbody.AddForce(throwDirection * 25, ForceMode.Impulse);
+            }
+            else
+            {
+                Debug.LogWarning("No Rigidbody found on the object. Unable to throw.");
+            }
+
             //Clear the current object we were carrying
             currentObject = null;
         }
     }
+
 
     //Method to update the carried object's position
     //Call this from another script to move the object with the player
