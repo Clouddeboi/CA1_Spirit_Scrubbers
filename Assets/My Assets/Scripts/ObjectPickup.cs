@@ -131,7 +131,8 @@ public class ObjectPickup : MonoBehaviour
         if (currentObject != null && isCarryingObject)
         {
             //Position the object just in front of the player
-            currentObject.transform.position = transform.position + transform.forward * 1.75f;  //Adjust distance if needed
+            Vector3 carryPositionOffset = new Vector3(0, 1.5f, 0);
+            currentObject.transform.position = transform.position + transform.forward * 1.75f + carryPositionOffset;  //Adjust distance if needed
             currentObject.transform.rotation = transform.rotation;  //Keep rotation aligned with player
         }
     }
