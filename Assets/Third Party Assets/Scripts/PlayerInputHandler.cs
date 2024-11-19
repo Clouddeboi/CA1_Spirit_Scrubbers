@@ -10,10 +10,24 @@ public class PlayerInputHandler : MonoBehaviour
     private ObjectPickup objectPickup;
 
     //Set the interactable layer in the Inspector
-    [SerializeField] private LayerMask interactableLayer; 
+    [SerializeField] private LayerMask interactableLayer;
 
     //Set the detection box size (3D) in the Inspector
-    [SerializeField] private Vector3 detectionBoxSize = new Vector3(2f, 2f, 2f); 
+    [SerializeField] private Vector3 detectionBoxSize = new Vector3(2f, 2f, 2f);
+
+    //Set the dash speed in the editor
+    [SerializeField] private float dashSpeed = 20f;
+    //Duration of the dash
+    [SerializeField] private float dashDuration = 0.2f;
+    //Cooldown time for dashing
+    [SerializeField] private float dashCooldown = 1f;
+    //Bool to check if the player is dashing
+    private bool isDashing = false; 
+    //Time when the dash ends
+    private float dashEndTime = 0f;
+    //Time when the player can dash again
+    private float nextDashTime = 0f; 
+    //dashEndTime and nextDashTime are used as variables for a dash cooldown
 
     private void Awake()
     {
@@ -38,9 +52,9 @@ public class PlayerInputHandler : MonoBehaviour
             //Attach ObjectPickup at runtime if not already attached
             objectPickup = mover.gameObject.AddComponent<ObjectPickup>();
             //Set LayerMask for interactables
-            objectPickup.SetLayerMask(interactableLayer); 
+            objectPickup.SetLayerMask(interactableLayer);
             //Set detection range (box size)
-            objectPickup.SetDetectionRange(detectionBoxSize); 
+            objectPickup.SetDetectionRange(detectionBoxSize);
         }
     }
 
@@ -54,14 +68,35 @@ public class PlayerInputHandler : MonoBehaviour
         }
     }
 
+    //Method to handle dash input
+    public void OnDash(CallbackContext context)
+    {
+        //Check if the dash input is performed and if dashing is allowed
+        if (context.performed && Time.time >= nextDashTime)
+        {
+            StartDash();
+        }
+    }
+
+    private void StartDash()
+    {
+        //Set dashing bool
+        isDashing = true;
+        //Set when the dash ends
+        dashEndTime = Time.time + dashDuration; 
+        //Set next dash availability
+        nextDashTime = Time.time + dashCooldown;
+        //Increase mover's speed to dash speed
+        //This is so we can only dash while moving
+        mover.SetDashSpeed(dashSpeed);
+    }
+
     //Method to handle interact input (button press)
     public void OnInteract(CallbackContext context)
     {
-        //Debugging for when we are interacting with an object/press the interact input
+        //Check if the interact input is performed
         if (context.performed)
         {
-            Debug.Log("Interact button pressed!");
-
             if (objectPickup != null)
             {
                 //Check for interactable objects in front of the player
@@ -69,30 +104,24 @@ public class PlayerInputHandler : MonoBehaviour
 
                 if (objectPickup.isFacingObject)
                 {
-                    //If player is not already carrying an object, pick it up
+                    //If player is not carrying an object, pick it up
                     if (!objectPickup.IsCarryingObject())
                     {
                         GameObject objectToPickup = objectPickup.GetCarriedObject();
                         if (objectToPickup != null)
                         {
                             objectPickup.PickupObject(objectToPickup);
-                            Debug.Log("Picked up object: " + objectToPickup.name);
                         }
                     }
-                    //Otherwise drop the object if it's already being carried
+                    //Otherwise, drop the carried object
                     else
                     {
                         GameObject objectToDrop = objectPickup.GetCarriedObject();
                         if (objectToDrop != null)
                         {
                             objectPickup.DropObject(objectToDrop);
-                            Debug.Log("Dropped object: " + objectToDrop.name);
                         }
                     }
-                }
-                else
-                {
-                    Debug.Log("No object to interact with.");
                 }
             }
         }
@@ -103,8 +132,16 @@ public class PlayerInputHandler : MonoBehaviour
         //Update the position of the carried object every frame
         if (objectPickup != null && objectPickup.IsCarryingObject())
         {
-            //Keep the carried object in front of the player
             objectPickup.UpdateCarriedObjectPosition();
+        }
+
+        //End dash if the duration has passed
+        if (isDashing && Time.time >= dashEndTime)
+        {
+            //Reset dashing bool
+            isDashing = false;
+            //Reset mover's speed to normal
+            mover.SetDashSpeedToNormal();
         }
     }
 }
