@@ -11,6 +11,7 @@ TagManager:
   - Hammer
   - HandFan
   - SilverNecklace
+  - Audio
   layers:
   - Default
   - TransparentFX

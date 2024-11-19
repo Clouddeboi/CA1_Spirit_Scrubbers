@@ -2,6 +2,13 @@ using UnityEngine;
 
 public class ObjectPickup : MonoBehaviour
 {
+    //We add a referene to the audio manager so we can play sounds
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     //Layer mask to specify which layers the detection will interact with
     //for now we just want the interactable layer
     private LayerMask layerMask; 
@@ -100,6 +107,8 @@ public class ObjectPickup : MonoBehaviour
     {
         if (objectToDrop != null)
         {
+            //Throwing Item Audio
+            audioManager.PlaySFX(audioManager.ItemThrow);
             //We are no longer carrying an object
             isCarryingObject = false;
 
