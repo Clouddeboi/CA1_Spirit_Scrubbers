@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - IronIngot
+  - WoodenPlank
+  - BagOfSilverDust
+  - Paper
+  - Hammer
+  - HandFan
+  - SilverNecklace
   layers:
   - Default
   - TransparentFX
