@@ -91,6 +91,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 300209f8-be80-4a18-a49d-c1d1bf9a26df
     m_ActionName: 'PlayerMovement/Interact[/Keyboard/e,/XInputControllerWindows/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7873408828332942544}
+        m_TargetAssemblyTypeName: PlayerInputHandler, Assembly-CSharp
+        m_MethodName: OnDash
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 11fffa14-e521-469e-933a-c6dcd020e030
+    m_ActionName: 'PlayerMovement/Dash[/Keyboard/shift,/XInputControllerWindows/rightTrigger,/XInputControllerWindows/leftTrigger]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerMovement
@@ -112,6 +128,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   detectionBoxSize: {x: 2, y: 2, z: 2}
+  dashSpeed: 20
+  dashDuration: 0.2
+  dashCooldown: 1
 --- !u!114 &7250538916910825542
 MonoBehaviour:
   m_ObjectHideFlags: 0
