@@ -176,4 +176,16 @@ public class ObjectPickup : MonoBehaviour
         //Draw a wireframe box to visualize the detection area
         Gizmos.DrawWireCube(Vector3.zero, boxSize);
     }
+    /*
+        Method to clear the carried object state
+        This is used for when we combine an item while its in our hands
+        We need this so we can pick up items again as the game still thinks 
+        we are holding and item and will throw it instead of picking it up
+    */
+
+    public void ClearCarriedObject()
+    {
+        isCarryingObject = false;
+        currentObject = null;
+    }
 }
