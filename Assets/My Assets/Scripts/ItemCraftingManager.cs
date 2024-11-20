@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 public class ItemCraftingManager : MonoBehaviour
 {
+    //Audio Manager CLass
+    AudioManager audioManager;
     //Define a class to represent a combination
     [System.Serializable]
     public class ItemCombination
@@ -33,6 +35,10 @@ public class ItemCraftingManager : MonoBehaviour
                 if ((gameObject.CompareTag(combination.item1Tag) && collision.gameObject.CompareTag(combination.item2Tag)) ||
                     (gameObject.CompareTag(combination.item2Tag) && collision.gameObject.CompareTag(combination.item1Tag)))
                 {
+                    //Audio Manager
+                    audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+                    //Plays SFX
+                    audioManager.PlaySFX(audioManager.Success);
                     //Find the ObjectPickup script on the player
                     ObjectPickup objectPickup = FindObjectOfType<ObjectPickup>();
 

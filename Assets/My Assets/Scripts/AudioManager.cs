@@ -9,7 +9,8 @@ public class AudioManager : MonoBehaviour
 
     [Header("---Audio Clips---")]
     public AudioClip backgroundMusic;
-    // public AudioClip Dash;
+    public AudioClip Dash;
+    public AudioClip Success;
     // public AudioClip ItemPickUp;
     // public AudioClip ItemDrop;
     // public AudioClip Footsteps;

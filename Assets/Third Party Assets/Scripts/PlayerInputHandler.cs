@@ -5,6 +5,8 @@ using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerInputHandler : MonoBehaviour
 {
+    //Audio Manager
+    AudioManager audioManager;
     private PlayerInput playerInput;
     private Mover mover;
     private ObjectPickup objectPickup;
@@ -31,6 +33,8 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Awake()
     {
+        //Audio Manager
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
         //Get the PlayerInput component attached to this GameObject
         playerInput = GetComponent<PlayerInput>();
         //Find all movers and assign the appropriate one to the player index
@@ -74,6 +78,8 @@ public class PlayerInputHandler : MonoBehaviour
         //Check if the dash input is performed and if dashing is allowed
         if (context.performed && Time.time >= nextDashTime)
         {
+            //Dash SFX
+            audioManager.PlaySFX(audioManager.Dash);
             StartDash();
         }
     }
