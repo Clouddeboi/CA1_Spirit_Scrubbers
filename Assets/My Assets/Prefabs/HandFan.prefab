@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 149893415877964792}
   m_Layer: 3
   m_Name: HandFan
-  m_TagString: Untagged
+  m_TagString: HandFan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
