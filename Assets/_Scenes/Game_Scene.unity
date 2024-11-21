@@ -701,6 +701,7 @@ MonoBehaviour:
   backgroundMusic: {fileID: 8300000, guid: 694426db154b8a949b0e2339887e50e0, type: 3}
   Dash: {fileID: 8300000, guid: 9c97a5c311c854140a5eedf55bf91450, type: 3}
   Success: {fileID: 8300000, guid: e9187b8713d684240940d0a9dae260d1, type: 3}
+  Pickup: {fileID: 8300000, guid: 92329b82c7b2f1a439a863ecf58fc173, type: 3}
   ItemThrow: {fileID: 8300000, guid: a7b1def64e4828e4d902b55693d165c9, type: 3}
 --- !u!1001 &959285957
 PrefabInstance:

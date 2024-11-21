@@ -62,7 +62,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Emission_Map:
-        m_Texture: {fileID: 2800000, guid: fab39a712b9b4914e981863c8c7fa233, type: 3}
+        m_Texture: {fileID: 2800000, guid: c45c39fc9aa8ebb40969bca9cb87ad21, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -115,7 +115,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Emission_Intensity: 2.02
+    - _Emission_Intensity: 2.8
     - _Emissive_Pulse: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -123,8 +123,9 @@ Material:
     - _Max_Pulse_Intensity: 1
     - _Metallic: 0
     - _Metallic_intensity: 1
-    - _Min_Pulse_intensity: 0.421
+    - _Min_Pulse_intensity: 0.104
     - _Mode: 0
+    - _Normal_Intensity: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Pulse_Speed: 1.87
@@ -144,6 +145,6 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Emission_Colour: {r: 0.87627715, g: 0.11338554, b: 0.9245283, a: 0}
+    - _Emission_Colour: {r: 0.8868275, g: 0.9254902, b: 0.11372549, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

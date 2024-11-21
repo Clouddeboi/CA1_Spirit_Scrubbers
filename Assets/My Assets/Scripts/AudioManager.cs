@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip backgroundMusic;
     public AudioClip Dash;
     public AudioClip Success;
-    // public AudioClip ItemPickUp;
+    public AudioClip Pickup;
     // public AudioClip ItemDrop;
     // public AudioClip Footsteps;
     public AudioClip ItemThrow;

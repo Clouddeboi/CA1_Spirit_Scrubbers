@@ -93,6 +93,8 @@ public class ObjectPickup : MonoBehaviour
     {
         if (objectToPickup != null)
         {
+            //Pickup Item SFX
+            audioManager.PlaySFX(audioManager.Pickup);
             //We are now carrying an object
             isCarryingObject = true;
             
