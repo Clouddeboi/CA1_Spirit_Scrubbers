@@ -44,6 +44,23 @@ public class TaskManager : MonoBehaviour
         Debug.Log($"No task found for item tag: {itemTag}");
     }
 
+    //Method to check if all tasks are completed
+    public bool AreAllTasksComplete()
+    {
+        //Loop through each task in the tasks list
+        foreach (Task task in tasks)
+        {
+            //If any task is not completed, return false
+            if (!task.isCompleted)
+            {
+                return false;
+            }
+        }
+
+        //If all tasks are completed, return true
+        return true;
+    }
+
     public List<Task> GetTasks()
     {
         return tasks;
