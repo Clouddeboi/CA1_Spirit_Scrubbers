@@ -7,6 +7,9 @@ public class ObjectCollectionPoint : MonoBehaviour
     [SerializeField]
     private List<string> destroyableTags = new List<string>();
 
+    [SerializeField]
+    private TaskManager taskManager;
+
     //AudioManager to play sound effects (optional)
     private AudioManager audioManager;
 
@@ -27,6 +30,12 @@ public class ObjectCollectionPoint : MonoBehaviour
             if (audioManager != null)
             {
                 audioManager.PlaySFX(audioManager.Success); //This is just a placeholder sound
+            }
+
+            if (taskManager != null)
+            {
+                //updates the task based on the item associated with it
+                taskManager.UpdateTaskProgress(otherTag);
             }
 
             //Destroy the other object
