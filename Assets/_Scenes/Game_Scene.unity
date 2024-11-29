@@ -966,7 +966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba6b47e44a742642b15cbaf8f63af05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
   playerIndex: 0
 --- !u!65 &862456651
 BoxCollider:
@@ -2081,7 +2081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba6b47e44a742642b15cbaf8f63af05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 6
   playerIndex: 1
 --- !u!65 &1744705341
 BoxCollider:

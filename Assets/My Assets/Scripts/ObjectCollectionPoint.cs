@@ -27,6 +27,11 @@ public class ObjectCollectionPoint : MonoBehaviour
         //Check if the tag is in the list of destroyable tags
         if (destroyableTags.Contains(otherTag))
         {
+            //This fixes the bug of players throwing an object instead of picking it up
+            //if the item gets destroyed while still in their hands by clearing the carried object state
+            ObjectPickup objectPickup = FindObjectOfType<ObjectPickup>();
+            objectPickup.ClearCarriedObject();
+
             if (audioManager != null)
             {
                 audioManager.PlaySFX(audioManager.Success); //This is just a placeholder sound
