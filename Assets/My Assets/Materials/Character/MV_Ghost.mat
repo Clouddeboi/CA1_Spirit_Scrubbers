@@ -21,8 +21,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: MV_Ghost
-  m_Shader: {fileID: -6465566751694194690, guid: 8f51a7afbaa76e74490a50e66cdda1eb, type: 3}
-  m_Parent: {fileID: 2100000, guid: b830571e7e3c9344cb7dc6bd33c47164, type: 2}
+  m_Shader: {fileID: -6465566751694194690, guid: f6855433c4cee3b46805b12d026855d9, type: 3}
+  m_Parent: {fileID: 2100000, guid: 9140aca194727be48bb5bfc850f6e81c, type: 2}
   m_ModifiedSerializedProperties: 2
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -36,9 +36,36 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: bb902377f11bc304e9701e7c95e0b007, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission_Map:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Maps:
+        m_Texture: {fileID: 2800000, guid: 187609174c6b7374eafcc4ce644f25aa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Material_Map:
+        m_Texture: {fileID: 2800000, guid: 187609174c6b7374eafcc4ce644f25aa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_Map:
+        m_Texture: {fileID: 2800000, guid: 4834caeb96d4cf14080d49e631776275, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
-    m_Colors: []
+    m_Floats:
+    - _Alpha_Clip: 0
+    - _Emission_Intensity: 0.24
+    - _Emissive_Pulse: 1
+    - _Max_Pulse_Intensity: 0.709
+    - _Transparency: 0.032
+    - _Use_Emission: 1
+    m_Colors:
+    - _Emission_Colour: {r: 0.6603774, g: 0.6603774, b: 0.6603774, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
