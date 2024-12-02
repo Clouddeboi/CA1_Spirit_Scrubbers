@@ -1520,7 +1520,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 53813319884426464, guid: 9db38445e7bb9a3469e7312cee16ebcd, type: 3}
       propertyPath: m_Type
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 53813319884426464, guid: 9db38445e7bb9a3469e7312cee16ebcd, type: 3}
       propertyPath: m_RaycastTarget
@@ -1769,6 +1769,10 @@ PrefabInstance:
     - target: {fileID: 7665687150370431632, guid: 9db38445e7bb9a3469e7312cee16ebcd, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515479219878855038, guid: 9db38445e7bb9a3469e7312cee16ebcd, type: 3}
+      propertyPath: m_text
+      value: 'Spirit Scrubbers Version: Interim Build'
       objectReference: {fileID: 0}
     - target: {fileID: 8652078759158598017, guid: 9db38445e7bb9a3469e7312cee16ebcd, type: 3}
       propertyPath: m_Interactable
@@ -3066,6 +3070,10 @@ PrefabInstance:
     - target: {fileID: 8470413101693719873, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515479219878855038, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
+      propertyPath: m_text
+      value: 'Spirit Scrubbers Version: Interim Build'
       objectReference: {fileID: 0}
     - target: {fileID: 8706176518045718719, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
       propertyPath: m_AnchorMax.y

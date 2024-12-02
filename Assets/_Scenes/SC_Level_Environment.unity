@@ -978,10 +978,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CV_Game_Play
       objectReference: {fileID: 0}
-    - target: {fileID: 694644606401578655, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3852780452310829758, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1061,6 +1057,26 @@ PrefabInstance:
     - target: {fileID: 3852780452310829758, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263414867430462718, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
+      propertyPath: m_text
+      value: 03:28
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263414867430462718, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
+      propertyPath: m_fontSize
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263414867430462718, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
+      propertyPath: m_fontStyle
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7263414867430462718, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858158511668902746, guid: af3c8c67d9386ab4387b4c05d45420cb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2820,6 +2836,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3281235544837937524, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281235544837937524, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -2844,7 +2864,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3415586220260216515, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415586220260216515, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415586220260216515, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
+      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550139323032497652, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
@@ -3106,6 +3134,10 @@ PrefabInstance:
     - target: {fileID: 8470413101693719873, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515479219878855038, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
+      propertyPath: m_text
+      value: 'Spirit Scrubbers Version: Interim Build'
       objectReference: {fileID: 0}
     - target: {fileID: 8706176518045718719, guid: 6968d52cf3a259f45ab59ee8f5ce737a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3496,6 +3528,10 @@ PrefabInstance:
     - target: {fileID: 7665687150370431632, guid: f69f8b0ebd8efd34386874d969ab910e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515479219878855038, guid: f69f8b0ebd8efd34386874d969ab910e, type: 3}
+      propertyPath: m_text
+      value: 'Spirit Scrubbers Version: Interim Build'
       objectReference: {fileID: 0}
     - target: {fileID: 8652078759158598017, guid: f69f8b0ebd8efd34386874d969ab910e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

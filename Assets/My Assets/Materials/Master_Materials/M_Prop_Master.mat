@@ -123,11 +123,12 @@ Material:
     - _Max_Pulse_Intensity: 1
     - _Metallic: 0
     - _Metallic_intensity: 1
-    - _Min_Pulse_intensity: 0.421
+    - _Min_Pulse_intensity: 0.077
     - _Mode: 0
+    - _Normal_Intensity: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Pulse_Speed: 1.87
+    - _Pulse_Speed: 3.12
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SmoothnessTextureChannel: 0
