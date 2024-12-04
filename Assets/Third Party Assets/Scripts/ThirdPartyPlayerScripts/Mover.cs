@@ -26,7 +26,7 @@ public class Mover : MonoBehaviour
 
         //Ensure Rigidbody is set to use discrete collision detection
         //This is to avoid unnecessary lag
-        rb.collisionDetectionMode = CollisionDetectionMode.Discrete;
+        rb.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
 
         currentSpeed = moveSpeed; //Set the initial speed to moveSpeed
     }
