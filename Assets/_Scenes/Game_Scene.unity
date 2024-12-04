@@ -978,10 +978,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 826740221}
   player2: {fileID: 623755422}
-  minFOV: 55
+  minFOV: 75
   maxFOV: 90
   zoomSpeed: 3.5
   maxDistance: 20
+  moveSpeed: 5
+  sideDistanceThreshold: 0
 --- !u!1 &826713947
 GameObject:
   m_ObjectHideFlags: 0
@@ -2867,6 +2869,22 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 6664358993437552698, guid: f68053474add532489e43bbf51903da3, type: 3}
+    - target: {fileID: 2042419841491435250, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
+      propertyPath: m_Size.z
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698040795304593191, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698040795304593191, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698040795304593191, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3698040795304593191, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.43
@@ -2906,10 +2924,6 @@ PrefabInstance:
     - target: {fileID: 3698040795304593191, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3698040795304593191, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9104414780499302089, guid: 237d253c6539a0e4885d4c3e3c0aec60, type: 3}
       propertyPath: m_Name
@@ -3045,6 +3059,18 @@ PrefabInstance:
     - target: {fileID: 793615835293029429, guid: 3b41b6b465770c247b8e4bb540631058, type: 3}
       propertyPath: m_Name
       value: Hammer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952851454246645565, guid: 3b41b6b465770c247b8e4bb540631058, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952851454246645565, guid: 3b41b6b465770c247b8e4bb540631058, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952851454246645565, guid: 3b41b6b465770c247b8e4bb540631058, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 8952851454246645565, guid: 3b41b6b465770c247b8e4bb540631058, type: 3}
       propertyPath: m_LocalPosition.x
