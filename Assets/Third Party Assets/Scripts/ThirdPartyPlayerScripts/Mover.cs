@@ -88,4 +88,7 @@ public class Mover : MonoBehaviour
         //Use MovePosition to move the Rigidbody
         rb.MovePosition(newPosition);
     }
+    
 }
+
+

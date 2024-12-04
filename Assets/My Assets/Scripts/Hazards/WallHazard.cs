@@ -21,7 +21,7 @@ public class LayeredWallHazard : MonoBehaviour
         InvokeRepeating(nameof(ToggleWall), toggleInterval, toggleInterval);
     }
 
-    void ToggleWall()
+    public void ToggleWall()
     {
         // Toggle visibility
         isVisible = !isVisible;
