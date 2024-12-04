@@ -14,10 +14,12 @@ public class ObjectPickup : MonoBehaviour
     private LayerMask layerMask; 
 
     //Size of the detection box (as a 3D box shape in front of the player)
-    private Vector3 boxSize = new Vector3(2f, 2f, 2f);  // Default size (2, 2, 2)
+    [SerializeField] private Vector3 boxSize = new Vector3(2f, 2f, 2f);  // Default size (2, 2, 2)
 
     //Offset of the detection box relative to the player (in front of the player)
-    private Vector3 boxOffset = new Vector3(0f, 1f, 1f); 
+    [SerializeField] private Vector3 boxOffset = new Vector3(0f, 1f, 1f); 
+
+    //[SerializeField] float throwForce = 25f;
 
     //Boolean to check if the player is facing an object
     //get; allows other scripts to retrieve the value
@@ -103,7 +105,7 @@ public class ObjectPickup : MonoBehaviour
 
     //Method to drop the object 
     //(updated)Method now throws the object in the direction the player is facing
-    public void DropObject(GameObject objectToDrop)
+    public void DropObject(GameObject objectToDrop, float throwForce)
     {
         if (objectToDrop != null)
         {
@@ -120,7 +122,7 @@ public class ObjectPickup : MonoBehaviour
                 //The direction the player is facing
                 Vector3 throwDirection = transform.forward;
                 //Add force to the object in the direction the player is facing
-                objectRigidbody.AddForce(throwDirection * 25, ForceMode.Impulse);
+                objectRigidbody.AddForce(throwDirection * throwForce, ForceMode.Impulse);
             }
             else
             {

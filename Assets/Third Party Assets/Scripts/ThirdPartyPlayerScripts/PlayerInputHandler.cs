@@ -123,9 +123,10 @@ public class PlayerInputHandler : MonoBehaviour
                     else
                     {
                         GameObject objectToDrop = objectPickup.GetCarriedObject();
+                        float throwForce = 25f;
                         if (objectToDrop != null)
                         {
-                            objectPickup.DropObject(objectToDrop);
+                            objectPickup.DropObject(objectToDrop, throwForce);
                         }
                     }
                 }
