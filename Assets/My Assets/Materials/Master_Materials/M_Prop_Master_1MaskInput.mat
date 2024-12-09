@@ -142,7 +142,7 @@ Material:
     - _SrcBlend: 1
     - _Tint_Intensity: 1
     - _UVSec: 0
-    - _Use_AO_Map: 0
+    - _Use_AO_Map: 1
     - _Use_Custom_Tint: 0
     - _Use_Emission: 1
     - _Use_Metallic_Map: 1
