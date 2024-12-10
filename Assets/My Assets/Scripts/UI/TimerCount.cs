@@ -25,6 +25,7 @@ public class TimerCount : MonoBehaviour
             //We dont need to add any task checks here as if the timer reaches 0 the game will always be a loss regardless
             //The timer will also never reach 0 if the game results in a Win
             Time.timeScale = 0;
+
         }
         //Formatting the timer into mins and seconds
         int mins = Mathf.FloorToInt(RemainingTime/60);
