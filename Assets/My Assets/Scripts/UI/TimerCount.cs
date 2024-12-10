@@ -1,12 +1,12 @@
 using UnityEngine;
 using TMPro;
 
-public class Timer : MonoBehaviour
+public class TimerCount : MonoBehaviour
 {
     //getting the timer text
     [SerializeField] TextMeshProUGUI timerText;
     //Getting the remaining time set in the inspector
-    [SerializeField]float RemainingTime;
+    [SerializeField] float RemainingTime;
     //Update is called once per frame
     void Update()
     {
@@ -30,5 +30,11 @@ public class Timer : MonoBehaviour
         int mins = Mathf.FloorToInt(RemainingTime/60);
         int secs = Mathf.FloorToInt(RemainingTime%60);
         timerText.text = string.Format("{00:00}:{1:00}", mins, secs);
+    }
+
+    // added by Anastasia McCormac
+    public float getTimeRemaining () {
+
+        return RemainingTime;
     }
 }
