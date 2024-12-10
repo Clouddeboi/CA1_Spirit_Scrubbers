@@ -151,4 +151,15 @@ public class PlayerInputHandler : MonoBehaviour
             mover.SetDashSpeedToNormal();
         }
     }
+
+    // Added by Anastasia McCormac
+    public float GetDashCooldown () {
+
+        return dashCooldown;
+    }
+
+    public float getDashTimer() {
+
+        return nextDashTime;
+    }
 }
