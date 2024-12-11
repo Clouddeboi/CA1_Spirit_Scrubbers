@@ -13,6 +13,7 @@ TagManager:
   - SilverNecklace
   - Audio
   - WallHazard
+  - Ghost
   layers:
   - Default
   - TransparentFX
