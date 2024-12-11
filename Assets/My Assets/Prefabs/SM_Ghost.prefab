@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6283529676987352505}
   - component: {fileID: 6255827240378098827}
   - component: {fileID: 4408288092680495547}
+  - component: {fileID: 8573935943340416818}
   m_Layer: 0
   m_Name: SM_Ghost
   m_TagString: Ghost
@@ -86,3 +87,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8573935943340416818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3832536951276317759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bea1aeb9d6feebc4c9275506fd2c8883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 2
+  radius: 4
+  angle: 0
