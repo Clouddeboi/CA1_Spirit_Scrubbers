@@ -11,9 +11,12 @@ public class AudioManager : MonoBehaviour
     public AudioClip backgroundMusic;
     public AudioClip Dash;
     public AudioClip Success;
-    // public AudioClip ItemPickUp;
-    // public AudioClip ItemDrop;
-    // public AudioClip Footsteps;
+    public AudioClip WallAppears;
+    public AudioClip PianoKey1;
+    public AudioClip PianoKey2;
+    public AudioClip PianoKey3;
+    public AudioClip PianoKey4;
+    //public AudioClip Footsteps;
     public AudioClip ItemThrow;
 
     //When the game starts we play the background music

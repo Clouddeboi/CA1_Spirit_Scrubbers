@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class LayeredWallHazard : MonoBehaviour
 {
+    AudioManager audioManager;
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     [Header("Wall Settings")]
     [SerializeField] private float toggleInterval = 5f; // Time interval for toggling visibility
 
@@ -23,6 +29,7 @@ public class LayeredWallHazard : MonoBehaviour
 
     public void ToggleWall()
     {
+        audioManager.PlaySFX(audioManager.WallAppears);
         // Toggle visibility
         isVisible = !isVisible;
 
