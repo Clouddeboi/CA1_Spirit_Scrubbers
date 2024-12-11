@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6255827240378098827}
   - component: {fileID: 4408288092680495547}
   - component: {fileID: 8573935943340416818}
+  - component: {fileID: 5082054214017207309}
   m_Layer: 0
   m_Name: SM_Ghost
   m_TagString: Ghost
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0.000059053295}
   m_LocalPosition: {x: 0.117952704, y: 3.052917, z: -0.31262207}
-  m_LocalScale: {x: 25, y: 25, z: 25}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -179.993, z: 0}
@@ -103,3 +104,24 @@ MonoBehaviour:
   speed: 2
   radius: 4
   angle: 0
+--- !u!65 &5082054214017207309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3832536951276317759}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 8
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 192
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.08921156, y: 0.07286526, z: 0.0949943}
+  m_Center: {x: -0.000000018626455, y: 0.03793583, z: -0.000023745011}
