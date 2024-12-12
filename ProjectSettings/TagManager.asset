@@ -14,6 +14,9 @@ TagManager:
   - Audio
   - WallHazard
   - Ghost
+  - HammerTask
+  - SilverNecklaceTask
+  - HandFanTask
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TaskManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class TaskManager : MonoBehaviour
         public int requiredAmount = 1;
         public int currentAmount = 0;
         public bool isCompleted = false;
+        public GameObject uiElement;//reference to a task card
     }
 
     [SerializeField]
@@ -42,6 +44,11 @@ public class TaskManager : MonoBehaviour
                         Timer.RemainingTime += 10f;
                     }
                     Debug.Log($"Task '{task.taskName}' completed!");
+
+                    if (task.uiElement != null)
+                    {
+                        task.uiElement.SetActive(!task.uiElement.activeSelf); //Toggles visibility of the task card when task is complete
+                    }
                 }
 
                 //Debugs the amount needed to finish task and how many are already collected
