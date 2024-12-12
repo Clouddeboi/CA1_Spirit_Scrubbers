@@ -445,7 +445,7 @@ Transform:
   m_GameObject: {fileID: 34549186}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0, z: -10.9}
+  m_LocalPosition: {x: 2.02, y: 0, z: -6.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2515,7 +2515,6 @@ Transform:
   - {fileID: 1000728752}
   - {fileID: 2022398369}
   - {fileID: 86094155}
-  - {fileID: 1358825867}
   - {fileID: 123162935}
   m_Father: {fileID: 1314542798}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5244,6 +5243,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2900582147762684397, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+      propertyPath: Timer
+      value: 
+      objectReference: {fileID: 1883778518}
     - target: {fileID: 4631962869385851798, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
       propertyPath: m_Name
       value: PF_Piano
@@ -5284,11 +5287,8 @@ PrefabInstance:
       addedObject: {fileID: 1465992106}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2218703949989321089, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
-      insertIndex: -1
+      insertIndex: 4
       addedObject: {fileID: 1671755492}
-    - targetCorrespondingSourceObject: {fileID: 2218703949989321089, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1671755491}
     - targetCorrespondingSourceObject: {fileID: 2218703949989321089, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1671755490}
@@ -8320,68 +8320,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4342671295866887495, guid: 27f210ed52b6c0f409f410ac194d0a7c, type: 3}
   m_PrefabInstance: {fileID: 1351645771}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1358825866
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1358825867}
-  - component: {fileID: 1358825870}
-  - component: {fileID: 1358825868}
-  m_Layer: 0
-  m_Name: Block_InvisWall_3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1358825867
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358825866}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.06980959, y: 0.703635, z: 0.06980611, w: 0.7036701}
-  m_LocalPosition: {x: -4.4639997, y: 2, z: 3.2800002}
-  m_LocalScale: {x: 1.3730242, y: 4, z: 3.100805}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 331090482}
-  m_LocalEulerAnglesHint: {x: 0.001, y: 89.997, z: 11.331}
---- !u!65 &1358825868
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358825866}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1358825870
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358825866}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!224 &1361843136 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6234248091150764169, guid: 1ecc8b96642deab42b1d1d6b0ed6cdf8, type: 3}
@@ -10801,11 +10739,10 @@ MonoBehaviour:
   cornerTopRight: {fileID: 176097174}
   cornerBottomLeft: {fileID: 1002383234}
   cornerBottomRight: {fileID: 379573688}
---- !u!114 &1671755491
+--- !u!114 &1671755491 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2900582147762684397, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+  m_PrefabInstance: {fileID: 927270965}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1671755485}
   m_Enabled: 1
@@ -10813,22 +10750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fea0e612111e78248b404b6eb37fe6d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tasks:
-  - taskName: Craft Hammer
-    requiredTag: Hammer
-    requiredAmount: 1
-    currentAmount: 0
-    isCompleted: 0
-  - taskName: Craft Hand Fan
-    requiredTag: HandFan
-    requiredAmount: 1
-    currentAmount: 0
-    isCompleted: 0
-  - taskName: Craft Silver Necklace
-    requiredTag: SilverNecklace
-    requiredAmount: 1
-    currentAmount: 0
-    isCompleted: 0
 --- !u!114 &1671755492
 MonoBehaviour:
   m_ObjectHideFlags: 0

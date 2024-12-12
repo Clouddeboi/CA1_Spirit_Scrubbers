@@ -6,7 +6,7 @@ public class TimerCount : MonoBehaviour
     //getting the timer text
     [SerializeField] TextMeshProUGUI timerText;
     //Getting the remaining time set in the inspector
-    [SerializeField] float RemainingTime;
+    [SerializeField] public float RemainingTime;
     //Update is called once per frame
     void Update()
     {

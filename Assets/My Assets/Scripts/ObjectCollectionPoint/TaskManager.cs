@@ -3,6 +3,10 @@ using UnityEngine;
 
 public class TaskManager : MonoBehaviour
 {
+    [SerializeField]
+    private TimerCount Timer;
+    [SerializeField] float TimeAddition = 10f;
+    
     [System.Serializable]
     public class Task
     {
@@ -32,6 +36,11 @@ public class TaskManager : MonoBehaviour
                 {
                     //Mark the task as done and debug in console
                     task.isCompleted = true;
+
+                    if(Timer != null)
+                    {
+                        Timer.RemainingTime += 10f;
+                    }
                     Debug.Log($"Task '{task.taskName}' completed!");
                 }
 
