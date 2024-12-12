@@ -10,6 +10,11 @@ public class WorldManager : MonoBehaviour
     [SerializeField] private LayeredWallHazard Wall; //Reference to the cube with the random path movement
     [SerializeField] private float WallActivationDelay = 22.5f; //Delay before random movement starts
 
+    [Header("Game Over Settings")]
+    [SerializeField] private TimerCount timer; //Reference to the TimerCount script
+    [SerializeField] private GameObject GameOverScreen; //Game Over screen
+    private bool isGameOverScreenDisplayed = false;
+
     void Start()
     {
         //Start the RandomPath movement after the specified delay
@@ -17,6 +22,15 @@ public class WorldManager : MonoBehaviour
 
         //Start the Wall hazard
         Invoke(nameof(ActivateWall), RandomPathActivationDelay);
+    }
+
+    void Update()
+    {
+        // Check if the game is over
+        if (timer != null && timer.GameOver && !isGameOverScreenDisplayed)
+        {
+            DisplayGameOverScreen();
+        }
     }
 
     //Method to activate the random movement after delay
@@ -36,5 +50,18 @@ public class WorldManager : MonoBehaviour
             Wall.enabled = true; //Enable the wall script
             Debug.Log("Wall hazard activated!");
         }
+    }
+
+    //Display the Game Over screen
+    void DisplayGameOverScreen()
+    {
+        if (GameOverScreen != null)
+        {
+            GameOverScreen.SetActive(true);
+            Debug.Log("WorldManager: Game Over screen displayed!");
+            isGameOverScreenDisplayed = true; //Prevent multiple activations
+        }
+
+        Time.timeScale = 0; //Pause the game
     }
 }

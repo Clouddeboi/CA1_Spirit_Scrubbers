@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class ObjectCollectionPoint : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class ObjectCollectionPoint : MonoBehaviour
 
     //AudioManager to play sound effects
     private AudioManager audioManager;
+    public GameObject winScreen;
 
     private void Start()
     {
@@ -46,6 +48,12 @@ public class ObjectCollectionPoint : MonoBehaviour
                 if (taskManager.AreAllTasksComplete())
                 {
                     Debug.Log("All tasks completed!");
+
+                    if (winScreen != null)
+                    {
+                        winScreen.SetActive(winScreen.activeSelf); //Toggles visibility of the winScreen if you won the game
+                    }
+
                     Time.timeScale = 0;//This is a temporary "Win"
                 }
                 else
