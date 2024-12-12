@@ -10,10 +10,15 @@ public class WorldManager : MonoBehaviour
     [SerializeField] private LayeredWallHazard Wall; //Reference to the cube with the random path movement
     [SerializeField] private float WallActivationDelay = 22.5f; //Delay before random movement starts
 
-    [Header("Game Over Settings")]
+    [Header("Game Over Screen Settings")]
     [SerializeField] private TimerCount timer; //Reference to the TimerCount script
     [SerializeField] private GameObject GameOverScreen; //Game Over screen
     private bool isGameOverScreenDisplayed = false;
+
+    [Header("Victory Screen Settings")]
+    [SerializeField] private ObjectCollectionPoint objectCollectionPoint;
+    [SerializeField] private GameObject VictoryScreen; //Victory screen
+    private bool isVictoryScreenDisplayed = false;
 
     void Start()
     {
@@ -30,6 +35,12 @@ public class WorldManager : MonoBehaviour
         if (timer != null && timer.GameOver && !isGameOverScreenDisplayed)
         {
             DisplayGameOverScreen();
+        }
+
+        //Check if the player has won
+        if (objectCollectionPoint != null && objectCollectionPoint.Victory && !isVictoryScreenDisplayed)
+        {
+            DisplayVictoryScreen();
         }
     }
 
@@ -60,6 +71,19 @@ public class WorldManager : MonoBehaviour
             GameOverScreen.SetActive(true);
             Debug.Log("WorldManager: Game Over screen displayed!");
             isGameOverScreenDisplayed = true; //Prevent multiple activations
+        }
+
+        Time.timeScale = 0; //Pause the game
+    }
+
+    //Display the Victory screen
+    void DisplayVictoryScreen()
+    {
+        if (VictoryScreen != null)
+        {
+            VictoryScreen.SetActive(true);
+            Debug.Log("WorldManager: Victory screen displayed!");
+            isVictoryScreenDisplayed = true; //Prevent multiple activations
         }
 
         Time.timeScale = 0; //Pause the game

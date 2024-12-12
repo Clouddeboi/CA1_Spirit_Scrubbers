@@ -10786,6 +10786,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a0a7904f2ca3ca4abbce1eb95a3eaf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1671755492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1256008925319151346, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+  m_PrefabInstance: {fileID: 927270965}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930f643907cb0c7478c608e909215b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1671755493 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3292517012453416435, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
@@ -11847,7 +11858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 739640952}
-  RemainingTime: 2
+  RemainingTime: 30
   GameOver: 0
 --- !u!1 &1913466475 stripped
 GameObject:
@@ -12974,6 +12985,8 @@ MonoBehaviour:
   WallActivationDelay: 32
   timer: {fileID: 1883778518}
   GameOverScreen: {fileID: 242706578}
+  objectCollectionPoint: {fileID: 1671755492}
+  VictoryScreen: {fileID: 795991501}
 --- !u!224 &3852780452167907862 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6822332536236442162, guid: 6da01559fd8a9734f9860d95943a2400, type: 3}
