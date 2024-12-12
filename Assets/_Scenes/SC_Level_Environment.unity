@@ -785,6 +785,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123162934}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &128051244
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 128051245}
+  - component: {fileID: 128051246}
+  m_Layer: 0
+  m_Name: Torch_Ambiance_Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &128051245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128051244}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1311160304}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &128051246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128051244}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f53a8903cf36b54a93e694b845d7d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &130265336
 GameObject:
   m_ObjectHideFlags: 0
@@ -6697,6 +6741,7 @@ MonoBehaviour:
   ItemThrow: {fileID: 8300000, guid: 25d422e6eb53a9646a66e0b0e7b3bc4b, type: 3}
   GhostScream: {fileID: 8300000, guid: cba5b5be1a95bd0488f8bd04dcbd2126, type: 3}
   Fire: {fileID: 8300000, guid: 9fe88340acf385e45be851d15f8c8609, type: 3}
+  ambianceSource: {fileID: 0}
   PianoNotes:
   - {fileID: 8300000, guid: 58b07ec87401f0b4b9d92718c7c7b8c2, type: 3}
   - {fileID: 8300000, guid: a463a855246f2904fa164dd297c60ffa, type: 3}
@@ -7586,6 +7631,7 @@ Transform:
   - {fileID: 189598096}
   - {fileID: 959506643}
   - {fileID: 716990901}
+  - {fileID: 128051245}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1314542797
