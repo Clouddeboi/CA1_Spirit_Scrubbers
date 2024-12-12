@@ -5,7 +5,7 @@ public class AudioManager : MonoBehaviour
     //We define our audio sources and clips
     [Header("---Audio Sources---")]
     [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    [SerializeField] public AudioSource SFXSource;
 
     [Header("---Audio Clips---")]
     public AudioClip backgroundMusic;
@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     [Header("---Ambiance---")]
     public AudioClip GhostScream;
     public AudioClip Fire;
+    public AudioClip ambianceSource;
 
     //Array of Piano Notes
     [Header("---Piano Notes---")]
