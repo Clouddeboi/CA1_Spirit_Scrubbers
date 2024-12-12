@@ -97,7 +97,13 @@ PrefabInstance:
       addedObject: {fileID: 7676913714004207385}
     - targetCorrespondingSourceObject: {fileID: -2803397488010606034, guid: 1c8a8754fbe7844468e9ba44f50bb77b, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1256008925319151346}
+    - targetCorrespondingSourceObject: {fileID: -2803397488010606034, guid: 1c8a8754fbe7844468e9ba44f50bb77b, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 2900582147762684397}
+    - targetCorrespondingSourceObject: {fileID: -2803397488010606034, guid: 1c8a8754fbe7844468e9ba44f50bb77b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3148542054587273635}
   m_SourcePrefab: {fileID: 100100000, guid: 1c8a8754fbe7844468e9ba44f50bb77b, type: 3}
 --- !u!1 &2218703949989321089 stripped
 GameObject:
@@ -125,6 +131,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6785312, y: 1.0161446, z: 0.43}
   m_Center: {x: 0, y: 0.5080723, z: 0.11}
+--- !u!114 &1256008925319151346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218703949989321089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 930f643907cb0c7478c608e909215b69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyableTags:
+  - SilverNecklace
+  - Hammer
+  - HandFan
+  taskManager: {fileID: 2900582147762684397}
 --- !u!114 &2900582147762684397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -155,6 +178,23 @@ MonoBehaviour:
     requiredAmount: 1
     currentAmount: 0
     isCompleted: 0
+--- !u!114 &3148542054587273635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2218703949989321089}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a0a7904f2ca3ca4abbce1eb95a3eaf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  cornerTopLeft: {fileID: 0}
+  cornerTopRight: {fileID: 0}
+  cornerBottomLeft: {fileID: 0}
+  cornerBottomRight: {fileID: 0}
 --- !u!4 &4636604077785232452 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1c8a8754fbe7844468e9ba44f50bb77b, type: 3}

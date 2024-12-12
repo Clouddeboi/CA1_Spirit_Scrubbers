@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class GhostMovement : MonoBehaviour
 {
+
+    //AudioManager to play sound effects
+    private AudioManager audioManager;
     public Transform target; //Target object to rotate around
     public float speed = 0f; //speed of the movement
     public float radius = 0f; //radius of the path
@@ -16,6 +19,9 @@ public class GhostMovement : MonoBehaviour
 
     void Start()
     {
+        //Find the AudioManager in the scene if it exists
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         //Call RandomizeProperties every 10 seconds starting immediately
         InvokeRepeating("RandomizeMovement", 0f, 8f);
 
@@ -27,6 +33,10 @@ public class GhostMovement : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
+        if(speed >= 6.5f)
+        {
+            audioManager.PlaySFX(audioManager.GhostScream);
+        }
 
         // Smoothly transition to the new speed and radius using SmoothDamp
         speed = Mathf.SmoothDamp(speed, targetSpeed, ref speedVelocity, smoothTime);

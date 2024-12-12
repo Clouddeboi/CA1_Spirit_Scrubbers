@@ -13,8 +13,14 @@ public class RandomPath : MonoBehaviour
     private float minX, maxX, minZ, maxZ; //Calculated bounds
     private Vector3 targetPosition;
 
+        //AudioManager to play sound effects (optional)
+    private AudioManager audioManager;
+
     void Start()
     {
+        //Find the AudioManager in the scene if it exists
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
         //Calculate bounds based on the positions of the corner GameObjects
         //This is so the bounds are not just corners
         minX = Mathf.Min(cornerTopLeft.position.x, cornerBottomLeft.position.x);
@@ -47,5 +53,13 @@ public class RandomPath : MonoBehaviour
             transform.position.y,//Maintain current y position (we can adjust this to also change if we want to eventually)
             Random.Range(minZ, maxZ)//Random z within bounds
         );
+
+        //Plays a random piano from an array of piano notes
+        if (audioManager != null)
+        {
+            audioManager.ActivePianoNote = audioManager.PianoNotes[Random.Range(0, audioManager.PianoNotes.Length)];
+
+            audioManager.PlaySFX(audioManager.ActivePianoNote);
+        }
     }
 }

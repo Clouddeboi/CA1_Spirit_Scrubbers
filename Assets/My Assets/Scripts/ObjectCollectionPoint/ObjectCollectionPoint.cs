@@ -10,7 +10,7 @@ public class ObjectCollectionPoint : MonoBehaviour
     [SerializeField]
     private TaskManager taskManager;
 
-    //AudioManager to play sound effects (optional)
+    //AudioManager to play sound effects
     private AudioManager audioManager;
 
     private void Start()

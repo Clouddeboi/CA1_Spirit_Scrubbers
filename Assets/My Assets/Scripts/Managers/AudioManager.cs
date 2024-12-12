@@ -12,12 +12,18 @@ public class AudioManager : MonoBehaviour
     public AudioClip Dash;
     public AudioClip Success;
     public AudioClip WallAppears;
-    public AudioClip PianoKey1;
-    public AudioClip PianoKey2;
-    public AudioClip PianoKey3;
-    public AudioClip PianoKey4;
-    //public AudioClip Footsteps;
     public AudioClip ItemThrow;
+    //public AudioClip Footsteps;
+
+    [Header("---Ambiance---")]
+    public AudioClip GhostScream;
+    public AudioClip Fire;
+
+    //Array of Piano Notes
+    [Header("---Piano Notes---")]
+    public AudioClip[] PianoNotes;
+    //we leave this empty as it gets populated by a random sound when triggered
+    public AudioClip ActivePianoNote;
 
     //When the game starts we play the background music
     private void Start()

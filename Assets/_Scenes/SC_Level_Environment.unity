@@ -2385,7 +2385,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 80
+  field of view: 60
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2476,8 +2476,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 474538369}
   player2: {fileID: 1485467177}
-  minFOV: 75
-  maxFOV: 90
+  minFOV: 60
+  maxFOV: 80
   zoomSpeed: 3.5
   maxDistance: 20
   moveSpeed: 5
@@ -5247,6 +5247,22 @@ PrefabInstance:
       propertyPath: Timer
       value: 
       objectReference: {fileID: 1883778518}
+    - target: {fileID: 3148542054587273635, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+      propertyPath: cornerTopLeft
+      value: 
+      objectReference: {fileID: 1642255831}
+    - target: {fileID: 3148542054587273635, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+      propertyPath: cornerTopRight
+      value: 
+      objectReference: {fileID: 176097174}
+    - target: {fileID: 3148542054587273635, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+      propertyPath: cornerBottomLeft
+      value: 
+      objectReference: {fileID: 1002383234}
+    - target: {fileID: 3148542054587273635, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+      propertyPath: cornerBottomRight
+      value: 
+      objectReference: {fileID: 379573688}
     - target: {fileID: 4631962869385851798, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
       propertyPath: m_Name
       value: PF_Piano
@@ -5285,13 +5301,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3292517012453416435, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1465992106}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2218703949989321089, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1671755492}
-    - targetCorrespondingSourceObject: {fileID: 2218703949989321089, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1671755490}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
 --- !u!1 &954038422
 GameObject:
@@ -6619,14 +6629,18 @@ MonoBehaviour:
   musicSource: {fileID: 1489500406}
   SFXSource: {fileID: 1169650376}
   backgroundMusic: {fileID: 8300000, guid: 694426db154b8a949b0e2339887e50e0, type: 3}
-  Dash: {fileID: 8300000, guid: f90aa405daadafe41a6ee2dd4276d831, type: 3}
+  Dash: {fileID: 8300000, guid: 4c29fc588bed60148ab66d62436cb396, type: 3}
   Success: {fileID: 8300000, guid: 6d13ddbbcbf6b7d4d804cfb3d2bb2c00, type: 3}
   WallAppears: {fileID: 8300000, guid: 0604817a25dc41d45a9dfb5df9f906a3, type: 3}
-  PianoKey1: {fileID: 8300000, guid: 58b07ec87401f0b4b9d92718c7c7b8c2, type: 3}
-  PianoKey2: {fileID: 8300000, guid: a463a855246f2904fa164dd297c60ffa, type: 3}
-  PianoKey3: {fileID: 8300000, guid: e366edac9e4df1141b32b30e608a53d9, type: 3}
-  PianoKey4: {fileID: 8300000, guid: 6f1b1885172b6654dbb9a126b5e56eba, type: 3}
   ItemThrow: {fileID: 8300000, guid: 25d422e6eb53a9646a66e0b0e7b3bc4b, type: 3}
+  GhostScream: {fileID: 8300000, guid: cba5b5be1a95bd0488f8bd04dcbd2126, type: 3}
+  Fire: {fileID: 8300000, guid: 9fe88340acf385e45be851d15f8c8609, type: 3}
+  PianoNotes:
+  - {fileID: 8300000, guid: 58b07ec87401f0b4b9d92718c7c7b8c2, type: 3}
+  - {fileID: 8300000, guid: a463a855246f2904fa164dd297c60ffa, type: 3}
+  - {fileID: 8300000, guid: e366edac9e4df1141b32b30e608a53d9, type: 3}
+  - {fileID: 8300000, guid: 6f1b1885172b6654dbb9a126b5e56eba, type: 3}
+  ActivePianoNote: {fileID: 0}
 --- !u!1001 &1187625891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10717,56 +10731,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d22997dd6ca72d41b60f0048f4ae7c9, type: 3}
---- !u!1 &1671755485 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2218703949989321089, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
+--- !u!114 &1671755490 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3148542054587273635, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
   m_PrefabInstance: {fileID: 927270965}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1671755490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671755485}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a0a7904f2ca3ca4abbce1eb95a3eaf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  cornerTopLeft: {fileID: 1642255831}
-  cornerTopRight: {fileID: 176097174}
-  cornerBottomLeft: {fileID: 1002383234}
-  cornerBottomRight: {fileID: 379573688}
---- !u!114 &1671755491 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2900582147762684397, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
-  m_PrefabInstance: {fileID: 927270965}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671755485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fea0e612111e78248b404b6eb37fe6d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1671755492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1671755485}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 930f643907cb0c7478c608e909215b69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destroyableTags:
-  - SilverNecklace
-  - Hammer
-  - HandFan
-  taskManager: {fileID: 1671755491}
 --- !u!4 &1671755493 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3292517012453416435, guid: 48cab79c39275464b95e8f93317d87ef, type: 3}
