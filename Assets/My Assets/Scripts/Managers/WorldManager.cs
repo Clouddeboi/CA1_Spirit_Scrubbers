@@ -4,11 +4,11 @@ public class WorldManager : MonoBehaviour
 {
     [Header("Random Path Settings")]
     [SerializeField] private RandomPath CollectioPoint; //Reference to the cube with the random path movement
-    [SerializeField] private float RandomPathActivationDelay = 20f; //Delay before random movement starts
+    [SerializeField] private float RandomPathActivationDelay = 12.5f; //Delay before random movement starts
 
     [Header("Wall Settings")]
     [SerializeField] private LayeredWallHazard Wall; //Reference to the cube with the random path movement
-    [SerializeField] private float WallActivationDelay = 32f; //Delay before random movement starts
+    [SerializeField] private float WallActivationDelay = 22.5f; //Delay before random movement starts
 
     void Start()
     {

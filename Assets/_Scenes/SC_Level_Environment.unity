@@ -7014,7 +7014,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1828858706}
   - {fileID: 1711458762}
@@ -11347,6 +11347,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1671755493}
+    - target: {fileID: 8573935943340416818, guid: a5f6cf0c2bd534b4aa7e380c7169da5f, type: 3}
+      propertyPath: screamThreshold
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11794,7 +11798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 739640952}
-  RemainingTime: 60
+  RemainingTime: 30
 --- !u!1 &1913466475 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 624289855431763502, guid: 6da01559fd8a9734f9860d95943a2400, type: 3}

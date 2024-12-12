@@ -16,6 +16,7 @@ public class GhostMovement : MonoBehaviour
     private float radiusVelocity = 0f; // Time to transition to new radius
 
     private float smoothTime = 4f;
+    [SerializeField] private float screamThreshold = 6.5f;
 
     void Start()
     {
@@ -33,11 +34,6 @@ public class GhostMovement : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-        if(speed >= 6.5f)
-        {
-            audioManager.PlaySFX(audioManager.GhostScream);
-        }
-
         // Smoothly transition to the new speed and radius using SmoothDamp
         speed = Mathf.SmoothDamp(speed, targetSpeed, ref speedVelocity, smoothTime);
         radius = Mathf.SmoothDamp(radius, targetRadius, ref radiusVelocity, smoothTime);
@@ -59,5 +55,11 @@ public class GhostMovement : MonoBehaviour
         radius = Random.Range(2f, 10f); //Random radius between 0.5 and 3
 
         Debug.Log($"After: Speed = {speed}, Radius = {radius}");
+
+        //if the speed is over the threshold, play the scream sound effect
+        if(speed >= screamThreshold)
+        {
+            audioManager.PlaySFX(audioManager.GhostScream);
+        }
     }
 }
