@@ -3,7 +3,12 @@ guid: f28202cbd32f15244b9dd02f6707fc29
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: HandFan
+    second: {fileID: 2100000, guid: abc9c410adcf3eb4ea8f9795f6a56f18, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
