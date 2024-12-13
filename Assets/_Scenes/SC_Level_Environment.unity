@@ -2874,6 +2874,63 @@ Transform:
   - {fileID: 336600693}
   m_Father: {fileID: 1252833893}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &396386520
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.653694
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2944692
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.260195
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1183663669216354431, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473954136409139499, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
+      propertyPath: m_Name
+      value: BagOfSilverDust
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e078f4200f40bbf4699329e35e38140e, type: 3}
 --- !u!1001 &399814877
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13269,3 +13326,4 @@ SceneRoots:
   - {fileID: 1473104344}
   - {fileID: 1314542798}
   - {fileID: 711252731}
+  - {fileID: 396386520}

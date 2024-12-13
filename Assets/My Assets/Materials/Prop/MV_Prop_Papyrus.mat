@@ -47,7 +47,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AO_Intensity: 1
-    - _Emission_Intensity: 0.75
+    - _Emission_Intensity: 0.5
     - _Fresnel_Strength: 2
     - _Metallic_intensity: 1
     - _Use_AO_Map: 1

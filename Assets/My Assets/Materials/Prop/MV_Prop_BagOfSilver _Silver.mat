@@ -47,11 +47,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _AO_Intensity: 0.3
-    - _Emission_Intensity: 0.25
+    - _Emission_Intensity: 0.5
     - _Fresnel_Strength: 4
-    - _Metallic_intensity: 0.7
+    - _Metallic_intensity: 0.2
     - _Normal_Intensity: 0.77
-    - _Smoothness_Intensity: 0.64
+    - _Smoothness_Intensity: 0.4
     - _Use_AO_Map: 0
     - _Use_Emission: 0
     - _Use_Metallic_Map: 0
