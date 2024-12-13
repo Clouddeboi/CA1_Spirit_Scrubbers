@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Albedo:
-        m_Texture: {fileID: 2800000, guid: 105db511eac649244ad646bea23c14c5, type: 3}
+        m_Texture: {fileID: 2800000, guid: b21b3651404eae448979557e17e74334, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Material_Map:
@@ -47,8 +47,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _AO_Intensity: 1
-    - _Emission_Intensity: 0.25
-    - _Fresnel_Strength: 4
+    - _Emission_Intensity: 0.75
+    - _Fresnel_Strength: 2
     - _Metallic_intensity: 1
     - _Use_AO_Map: 1
     - _Use_Emission: 0
